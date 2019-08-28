@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+
+	<h3>open console</h3>
+
+
+<script type="text/javascript">
+
+	var Person = function(name, birth, job){
+		this.name = name;
+		this.birth = birth;
+		this.job = job;
+		console.log("Person: name is "+name+", birth is "+birth+", job is "+job);
+	}
+
+	var Athlet = function(name, birth, job, medal){
+		Person.call(this, name, birth, job)
+		this.medal = medal;
+
+		console.log("Athlet: name is "+name+", birth is "+birth+", job is "+job+", i won "+medal+" medal");
+
+	}
+
+	var john = new Athlet('john', 1455, 'athlet', 5);
+
+	console.log(john);
+	
+
+</script>
+</body>
+</html>
